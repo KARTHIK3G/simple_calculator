@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpel calculator</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(224, 125, 233, 0.199);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .di {
+            display: flex;
+            width: auto;
+            /* position: ; */
+            justify-content: center;
+            align-items: center;
+            font-variant: small-caps;
+
+
+        }
+
+        .h {
+            padding: 0;
+        }
+
+        span {
+            color: rgba(40, 4, 170, 0.911);
+            position: relative;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            background-color: rgb(150, 50, 243);
+            color: #fff;
+            letter-spacing: 2px;
+            font-style: italic;
+            font-weight: 900;
+            font-variant: small-caps;
+            cursor: pointer;
+            padding: 10px 25px;
+            border-radius: 3px 3px 20px 20px;
+            border: 2px solid rgb(27, 190, 182);
+            box-sizing: border-box;
+            box-shadow: 2px 3px 1px rgb(15, 15, 15);
+        }
+
+        input:hover {
+            background-color: rgb(150, 50, 243);
+            color: #fff;
+            letter-spacing: 2px;
+            font-style: italic;
+            font-weight: 900;
+            font-variant: small-caps;
+            cursor: pointer;
+            transition-delay: 100ms;
+            padding: 14px 35px;
+            border-radius: 3px 3px 20px 20px;
+            border: 2px solid rgb(27, 190, 182);
+            box-sizing: border-box;
+            box-shadow: 2px 3px 1px rgb(15, 15, 15);
+        }
+
+
+        h1 {
+            display: grid;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: rgb(5, 106, 238);
+        }
+
+        h1:hover {
+            display: grid;
+            cursor: auto;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: rgb(5, 106, 238);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>calculator</h1>
+
+
+    <input type="button" value="let's start" onclick="ok()"><br><br>
+    <p class="di" id="d1">addition = <span id="ad"></span> </p>
+    <p class="di" id="d2">susbtraction = <span id="su"></span> </p>
+    <p class="di" id="d3">multification = <span id="mu"></span> </p>
+    <p class="di" id="d4">division = <span id="du"></span> </p>
+
+    </div>
+    <script>
+
+
+        var d1 = document.getElementById("d1");
+        var d2 = document.getElementById("d2");
+        var d3 = document.getElementById("d3");
+        var d4 = document.getElementById("d4");
+
+        d1.style.display = "none";
+        d2.style.display = "none";
+        d3.style.display = "none";
+        d4.style.display = "none";
+
+
+
+        function ok() {
+
+            //    var a = document.getElementById("first").Number;
+            //    var b = document.getElementById("sce").Number;
+
+            var d1 = document.getElementById("d1");
+            var d2 = document.getElementById("d2");
+            var d3 = document.getElementById("d3");
+            var d4 = document.getElementById("d4");
+
+
+
+
+
+
+
+
+
+            var a = window.prompt("enter first number")
+            var b = window.prompt("enter second number")
+            a = Number(a);
+            b = Number(b);
+            if (a == 0 || b == NaN) {
+                window.reload();
+            }
+            else {
+
+                d1.style.display = "block";
+                d2.style.display = "block";
+                d3.style.display = "block";
+                d4.style.display = "block";
+                // no.style.display = "none";
+
+
+                var ad = document.getElementById("ad");
+                var su = document.getElementById("su");
+                var mu = document.getElementById("mu");
+                var du = document.getElementById("du");
+
+
+
+
+
+                ad.innerHTML = a + b;
+                su.innerHTML = a - b;
+                mu.innerHTML = a * b;
+                du.innerHTML = a / b;
+
+
+                //    console.log(document.URL);
+                //    console.log(b);
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
